@@ -27,3 +27,6 @@ VENDOR_PATH := vendor/google/panther
 
 include $(DEVICE_PATH)/BoardConfigCommon.mk
 include $(VENDOR_PATH)/BoardConfigVendor.mk
+
+# Props
+TARGET_SYSTEM_PROP :=  device/google/pantah/panther/system.prop

@@ -265,8 +265,11 @@ SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
 # Protected VM firmware
 BOARD_PVMFWIMAGE_PARTITION_SIZE := 0x00100000
 
+BUILD_BROKEN_DUP_RULES := true
+DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
+
 # Manifests
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/yaap/config/device_framework_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/infinity/config/device_framework_matrix.xml
 
 # Partitions
 AB_OTA_PARTITIONS += \
@@ -292,7 +295,7 @@ ifneq (user,$(TARGET_BUILD_VARIANT))
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 else ifneq (,$(wildcard vendor/yaap/signing/keys/releasekey.key))
 BOARD_AVB_ALGORITHM := SHA256_RSA2048
-BOARD_AVB_KEY_PATH := vendor/yaap/signing/keys/releasekey.key
+BOARD_AVB_KEY_PATH := vendor/infinity/signing/keys/releasekey.key
 else
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 endif

@@ -8,12 +8,12 @@
 
 # Inherit some common stuff
 TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Inherit device configuration
-DEVICE_CODENAME := panther
+DEVICE_CODENAME := cheetah
 DEVICE_PATH := device/google/pantah
-VENDOR_PATH := vendor/google/panther
+VENDOR_PATH := vendor/google/cheetah
 
 #
 # All components inherited here go to system image
@@ -53,22 +53,22 @@ $(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device.mk)
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := $(DEVICE_CODENAME)
 PRODUCT_MANUFACTURER := Google
-PRODUCT_MODEL := Pixel 7
-PRODUCT_NAME := yaap_$(DEVICE_CODENAME)
+PRODUCT_MODEL := Pixel 7 Pro
+PRODUCT_NAME := infinity_$(DEVICE_CODENAME)
 PRODUCT_SYSTEM_BRAND := google
 PRODUCT_SYSTEM_MANUFACTURER := Google
 PRODUCT_SYSTEM_NAME := generic_system_google
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 3120
+TARGET_SCREEN_WIDTH := 1440
 
 # YAAP Flags
 TARGET_SUPPORTS_64_BIT_APPS := true
 TARGET_ENABLE_BLUR := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildFingerprint=google/panther/panther:17/CP3A.261005.002.A1/16269273:user/release-keys \
+    BuildFingerprint=google/cheetah/cheetah:17/CP3A.261005.002.A1/16269273:user/release-keys \
     BuildSystemFingerprint=google/generic_system_google/generic:17/CP3A.261005.002.A1/16269273:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
 
